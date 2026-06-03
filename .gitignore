@@ -1,0 +1,38 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+
+# Packaging and build output
+.packaging-venv/
+build/
+build_resources/
+dist/
+release/
+*.egg-info/
+*.exe
+*.spec
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Conversion output and logs
+*.log
+*_converted
+*_converted.*
+templates/
