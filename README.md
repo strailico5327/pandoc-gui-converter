@@ -31,7 +31,6 @@ Pandoc Converter/
   pandoc_gui_converter.py
   pandoc_gui_converter.spec
   requirements.txt
-  template_0.docx
 ```
 
 `pandoc_gui_converter.py` is the application entry point. The existing
