@@ -31,7 +31,7 @@ Pandoc Converter/
 ```
 
 `pandoc_gui_converter.py` is the application entry point. The existing
-`pandoc_gui_converter.exe` file is a local packaged build artifact and is
+`pandoc_gui_converter.exe` file is a local packaged build artefact and is
 ignored by Git.
 
 ## Dependencies
@@ -64,7 +64,7 @@ Open the GUI and use the `Check Pandoc` button to confirm Pandoc is available.
 ## Git Ignore
 
 The `.gitignore` excludes Python caches, virtual environments, package build
-outputs, coverage artifacts, editor folders, OS metadata, local `.exe` builds,
+outputs, coverage artefacts, editor folders, OS metadata, local `.exe` builds,
 and logs.
 
 ## Licence
