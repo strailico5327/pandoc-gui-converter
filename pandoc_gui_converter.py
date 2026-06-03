@@ -43,11 +43,12 @@ from PySide6.QtWidgets import (
 )
 
 APP_TITLE = "Pandoc Markdown / DOCX Converter"
-ABOUT_TEXT = """TTF to WOFF2 Converter
+ABOUT_TEXT = """Pandoc Markdown / DOCX Converter
 © 2026 strailico5327
 
-Licensed under GNU GPLv3.
-Developed with assistance from OpenAI Codex."""
+Convert Markdown-like files to DOCX, and DOCX files back to Markdown, through Pandoc.
+
+Licensed under GNU GPLv3."""
 
 MARKDOWN_EXTS = {".md", ".markdown", ".mdown", ".mkd", ".txt"}
 DOCX_EXTS = {".docx"}
@@ -259,8 +260,8 @@ class PandocGui(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.setWindowTitle(APP_TITLE)
-        self.resize(920, 720)
-        self.setMinimumSize(820, 640)
+        self.resize(980, 880)
+        self.setMinimumSize(880, 760)
 
         self._running = False
         self.thread: QThread | None = None
@@ -294,6 +295,8 @@ class PandocGui(QMainWindow):
         self.setStyleSheet(
             """
             QWidget {
+                background: palette(window);
+                color: palette(window-text);
                 font-family: "Segoe UI";
                 font-size: 10pt;
             }
@@ -302,7 +305,16 @@ class PandocGui(QMainWindow):
                 font-weight: 700;
             }
             QLineEdit, QTextEdit, QComboBox {
-                background: #ffffff;
+                background: palette(base);
+                color: palette(text);
+                border: 1px solid palette(mid);
+            }
+            QLineEdit:disabled, QTextEdit:disabled, QComboBox:disabled {
+                background: palette(alternate-base);
+                color: palette(mid);
+            }
+            QTextEdit#monoBox {
+                font-family: Consolas, "Cascadia Mono", monospace;
             }
             QPushButton {
                 padding: 6px 12px;
@@ -327,6 +339,9 @@ class PandocGui(QMainWindow):
                 subcontrol-origin: margin;
                 left: 8px;
                 padding: 0 4px;
+            }
+            QRadioButton, QCheckBox {
+                spacing: 8px;
             }
             """
         )
@@ -439,7 +454,7 @@ class PandocGui(QMainWindow):
             self.preserve_docx_styles,
         ]
         for index, checkbox in enumerate(checkboxes):
-            checks_layout.addWidget(checkbox, index // 4, index % 4)
+            checks_layout.addWidget(checkbox, index // 2, index % 2)
             checkbox.toggled.connect(self._refresh_command_preview)
 
         layout.addWidget(checks, 4, 0, 1, 4)
