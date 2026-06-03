@@ -3,6 +3,10 @@
 Pandoc Converter is a small desktop Python GUI for converting Markdown files to
 Word DOCX files and DOCX files back to Markdown with Pandoc.
 
+##About Pandoc
+
+This tool is a simple GUI wrapper for Pandoc, a universal document converter. Pandoc must be installed separately before using this program.
+
 ## Features
 
 - Convert Markdown-like files (`.md`, `.markdown`, `.mdown`, `.mkd`, `.txt`) to
