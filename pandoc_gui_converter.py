@@ -46,7 +46,7 @@ APP_TITLE = "Pandoc Markdown / DOCX Converter"
 ABOUT_TEXT = """Pandoc Markdown / DOCX Converter
 © 2026 strailico5327
 
-Convert Markdown-like files to DOCX, and DOCX files back to Markdown, through Pandoc.
+Convert Markdown and DOCX with Pandoc.
 
 Licensed under GNU GPLv3."""
 

@@ -14,6 +14,8 @@ ENV/
 .packaging-venv/
 build/
 build_resources/
+build_support/pyinstaller-build/
+build_support/version_info.txt
 dist/
 release/
 *.egg-info/
@@ -30,9 +32,11 @@ htmlcov/
 .vscode/
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Conversion output and logs
 *.log
 *_converted
 *_converted.*
 templates/
+/version_info.txt
